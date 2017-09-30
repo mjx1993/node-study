@@ -1,0 +1,22 @@
+{
+  "name": "nunjucks-demo",
+  "version": "1.0.0",
+  "description": "nunjucks-demo",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "koa",
+    "async"
+  ],
+  "author": "unocus",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "dependencies": {
+    "nunjucks": "2.4.2"
+  }
+}

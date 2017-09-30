@@ -1,0 +1,12 @@
+body{
+    background-color:#222222;
+}
+nav {
+    color:#cc0000;
+    font-weight:bold;
+    font-size:2em;
+}
+#value{
+    color:#cc0000;
+    font-size:2.1em;
+}
