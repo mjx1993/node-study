@@ -8,6 +8,19 @@
     <link rel='stylesheet' href='/css/style.css' />
 </head>
 <body>
-    <p>fee</p>
+    <div class="mini-box">
+    	<form action="/server/loginAction" class="signform" method="post">
+    		<div class="sign-title"><span>Unoboy </span>后台管理</h2></div>
+    		<div class="list">
+    			<label for="name">Your Name: </label>
+    			<input type="text" name="name" class="item" />
+    		</div>
+    		<div class="list">
+    			<label for="password">Your password: </label>
+    			<input type="text" name="password" class="item" />
+    		</div>
+            <button type="submit" class="sign-btn">登录</button>
+    	</form>
+    </div>
 </body>
 </html>

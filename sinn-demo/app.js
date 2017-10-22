@@ -7,7 +7,7 @@ const co = require('co');
 const convert = require('koa-convert');
 const json = require('koa-json');
 const onerror = require('koa-onerror');
-const bodyparser = require('koa-bodyparser')();
+const bodyParser = require('koa-bodyparser');
 const logger = require('koa-logger');
 
 const templating = require('./templating');
@@ -18,6 +18,9 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 app.use(convert(logger()))
    .use(require('koa-static')(__dirname + '/public'));
+
+// parse request body:
+app.use(bodyParser());
 
 // app.use(views(__dirname + '/views', {
 //     extension: 'ejs'

@@ -4,9 +4,16 @@
 */
 
 class BackendMain {
-    // 登录页渲染
+    //登录页渲染
     static async Login(ctx) {
-        return ctx.render('login.html', { title: 'SInn管理平台'});
+        return ctx.render('login.html', { title: 'Unoboy管理平台'});
+    }
+
+    //首页渲染
+    static async home(ctx) {
+    	console.log(ctx.flash);
+    	const user = ctx.session.user;
+    	return ctx.render('home', { title: 'Unoboy管理平台',message:'这里是首页',user });
     }
 }
 
