@@ -9,6 +9,7 @@ const json = require('koa-json');
 const onerror = require('koa-onerror');
 const bodyParser = require('koa-bodyparser');
 const logger = require('koa-logger');
+const db = require('./rest/models/db');
 
 const templating = require('./templating');
 const { backendRouter } = require('./rest/index');
