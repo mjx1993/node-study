@@ -22,7 +22,7 @@ module.exports = async (ctx,next)=>{
       return ctx.error({ msg:new Error(err) });
     }
       logger.error(err.stack);
-      ctx.error({msg:'服务器错误!',error: err, status: ctx.status });
+      ctx.error({msg:'服务器错误!!',error: err, status: ctx.status });
   }
 }
 

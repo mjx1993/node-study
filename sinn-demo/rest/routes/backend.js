@@ -11,7 +11,8 @@ router
     .get('/', BackendMain.Login)                                                 //管理后台首页
     //用户相关
 	.post('/server/login', BackendUser.signIn)                                   // 用户登录验证接口
-
+	.get('/server/user', BackendMain.user)                                       // 用户管理主页
+	
   	//文章相关
   	.get('/server/home', BackendMain.home);                                      //管理后台主页
 

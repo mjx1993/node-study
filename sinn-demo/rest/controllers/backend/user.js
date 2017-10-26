@@ -17,7 +17,13 @@ class BackendUser {
 			ctx.session.user = {name, password};
 			ctx.redirect('/server/home');
 		}
-		// ctx.redirect('/server/home');
+		const result = await AdminUserModel.findOne({name, password: md5(password)});
+		if (!result) return ctx.render('error.html', {
+			message: '用户名或密码错误！',
+			error: {status: 404}
+		})
+		ctx.session.user = result;
+		ctx.redirect('/server/home');
 	}
 }
 

@@ -13,7 +13,7 @@ class BackendMain {
     static async home(ctx) {
     	console.log(ctx.flash);
     	const user = ctx.session.user;
-    	return ctx.render('home', { title: 'Unoboy管理平台',message:'这里是首页',user });
+    	return ctx.render('home.html', { title: 'Unoboy管理平台',message:'这里是首页',user });
     }
 }
 
