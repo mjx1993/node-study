@@ -1,0 +1,8 @@
+
+<div class="sidebar">
+    <div class="menu-box">
+        {% for item in menu %}
+        <a href="{{ item.route }}">{{ item.label }}</a>
+        {% endfor %}
+    </div>
+</div>
