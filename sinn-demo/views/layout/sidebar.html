@@ -2,7 +2,7 @@
 <div class="sidebar">
     <div class="menu-box">
         {% for item in menu %}
-        <a href="{{ item.route }}">{{ item.label }}</a>
+        <a href="{{ item.route }}" {% if index==loop.index0+1 %}class="blue"{% endif %}>{{ item.label }}</a>
         {% endfor %}
     </div>
 </div>

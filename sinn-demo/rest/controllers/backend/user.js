@@ -25,6 +25,22 @@ class BackendUser {
 		ctx.session.user = result;
 		ctx.redirect('/server/home');
 	}
+
+	//添加管理员
+	static async addUser(ctx) {
+		const { name,nickname,password } = ctx.request.body;
+		if (!name || !password) return ctx.render('error.html',{
+			message: '用户名和密码不能空！',
+			error: {status:400}
+		});
+		let isexist = await AdminUserModel.findOne({name, password: md5(password)});
+		if (isexist) return ctx.render('error.html', {
+			message: '用户名已存在！',
+			error: {status:400}
+		});
+		const result = await AdminUserModel.create({name, nickname, password: md5(password)});
+		ctx.redirect('/');
+	}
 }
 
 export default BackendUser;

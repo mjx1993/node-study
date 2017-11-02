@@ -12,6 +12,7 @@ router
     //用户相关
 	.post('/server/login', BackendUser.signIn)                                   // 用户登录验证接口
 	.get('/server/user', BackendMain.user)                                       // 用户管理主页
+	.post('/server/user/adduser', BackendUser.addUser)						 	 //添加管理员
 	
   	//文章相关
   	.get('/server/home', BackendMain.home);                                      //管理后台主页

@@ -53,10 +53,12 @@ export default {
 		...mapState(['adminInfo']),
 	},
 	methods: {
+		...mapActions(['getAdminData']),
 		async submitForm(formname) {
 			this.$refs[formname].validate(async (valid) => {
 				if (valid) {
-
+					let res = await login({username: this.loginForm.username, password: this.loginForm.password});
+					
 				} else {
 
 				}
