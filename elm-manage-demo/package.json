@@ -12,9 +12,10 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "element-ui": "^1.2.9",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "element-ui": "^1.2.9"
+    "vuex": "^3.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
