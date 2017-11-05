@@ -58,7 +58,18 @@ export default {
 			this.$refs[formname].validate(async (valid) => {
 				if (valid) {
 					let res = await login({username: this.loginForm.username, password: this.loginForm.password});
-					
+					if (res.status == 1) {
+						this.$message({
+							type: 'success',
+							message: '登录成功'
+						});
+						// this.$router.push('manage');
+					} else {
+						this.$message({
+							type: 'error',
+							message: res.message
+						});
+					}
 				} else {
 
 				}
